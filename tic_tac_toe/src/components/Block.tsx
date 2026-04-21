@@ -1,10 +1,12 @@
 import React from "react";
 
-
-const Block: React.FC =()=>{
+interface BlockProps{
+    value ?: string | null
+}
+const Block: React.FC<BlockProps> =(props)=>{
 return (
 <div className="block">
-
+{props.value}
 </div>
 )
 }

@@ -1,11 +1,12 @@
 import React from "react";
 
 interface BlockProps{
-    value ?: string | null
+    value ?: string | null;
+    onClick?: () => void
 }
 const Block: React.FC<BlockProps> =(props)=>{
 return (
-<div className="block">
+<div onClick={props.onClick} className="block">
 {props.value}
 </div>
 )
